@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You More 💕</title>
+  <style>
+    body {
+      background-color: #ffb6c1;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      color: #c2185b;
+      font-size: 1.8em;
+      margin-top: 15%;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: #ff4081;
+      animation: float 5s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0.8; }
+      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>I love you more, bacha! 💞</h1>
+  <p>You’re my forever, my pink sky, my everything 🌸</p>
+  <script>
+    // Cute floating hearts animation
+    const colors = ['#ff80ab', '#f06292', '#ec407a', '#e91e63'];
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement('div');
+      heart.innerHTML = '💖';
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
